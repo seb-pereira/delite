@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<title>SelfClosingTag</title>
+
+	<script type="text/javascript" src="./boilerplate.js"></script>
+
+	<script type="text/javascript">
+		require([
+			"dui/register",
+			"dui/SelfClosingTag",
+			"dojo/domReady!"
+		], function (register) {
+			register.parse();
+		});
+	</script>
+</head>
+<body>
+	<h1>Test SelfClosingTag</h1>
+	<d-self-closing-tag id="instance1"/>
+	<d-self-closing-tag id="instance2"/>
+</body>
+</html>
