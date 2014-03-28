@@ -88,6 +88,13 @@ define(["dojo/dom-construct", "dojo/has"], function (domConstruct, has) {
 
 						// Insert CSS into document
 						sheets[mid] = insertCss(adjustedCss);
+
+						// Remove script tag
+						var scriptNode = document.querySelector("script[data-requiremodule="
+							+ mid.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&") + "]");
+						if (scriptNode) {
+							scriptNode.parentNode.removeChild(scriptNode);
+						}
 					}
 				});
 				onload(mids);
